@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Variáveis do CSS */
+:root {
+
+    /* header */
+    --background-header: transparent;
+    --font-color-header: rgb(0, 0, 0);
+    --font-size-header: 25px;
+    /* header */
+
+    /* home */
+    --background-home: ;
+    --font-color-home: rgb(0, 0, 0);
+    --font-sizeh1-home: 60px;
+    --font-sizep-home: 25px;
+    /* home */
+}
+
+.dark-theme {
+    --background-header: black;
+    --font-color-header: rgb(255, 255, 255);
+    --font-size-header: 25px;
+}
+
+/* Variáveis do CSS */
+
+/* INTERFACE */
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* INTERFACE */
+
+/* HEADER */
+
+header {
+    background-color: var(--background-header);
+    position: fixed;
+    width: 100%;
+}
+
+/*header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1em;
+    background-image: linear-gradient(90deg, rgb(130, 87, 230) 0%, rgb(164, 14, 228) 92.32%);
+}*/
+
+header a {
+    color: var(--font-color-header);
+    text-decoration: none;
+    font-size: var(--font-size-header);
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .interface .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+header .interface .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header .interface .menu ul {
+    display: flex;
+}
+
+header .interface .menu ul li {
+    list-style: none;
+    padding: 1em;
+}
+
+/* HEADER */
+
+/* HOME */
+
+.home {
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .interface .container {
+    display: flex;
+}
+
+.home .interface .container h1 {
+    font-size: var(--font-sizeh1-home);
+}
+
+.home .interface .container p {
+    font-size: var(--font-sizep-home);
+}
+
+.home .interface .container img {
+    width: 300px;
+    height: 350px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HOME */

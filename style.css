@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Variáveis do CSS */
+:root {
+    --background-header: transparent;
+    --font-color-header: rgb(255, 255, 255);
+    --font-size-header: 20px;
+}
+
+.dark-theme {
+    --background-header: black;
+    --font-color-header: white;
+    --font-size-header: 20px;
+}
+
+/* Variáveis do CSS */
+
+/* INTERFACE */
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* INTERFACE */
+
+/* HEADER */
+
+header {
+    background-color: var(--background-header);
+    position: fixed;
+    width: 100%;
+}
+
+header a {
+    color: var(--font-header);
+    text-decoration: none;
+    font-size: var(--font-size-header);
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .interface .logo {}
+
+header .interface .logo img {}
+
+header .interface .menu ul {
+    display: flex;
+}
+
+header .interface .menu ul li {
+    list-style: none;
+    padding: 1em;
+}
+
+/* HEADER */
+
+/* HOME */
+
+.home {
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .interface {
+    background-color: rebeccapurple;
+}
+
+.home .interface .container {
+    background-color: red;
+}
+
+/* HOME */

@@ -110,29 +110,38 @@ header .interface .menu ul li {
 
 .home .interface {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .interface .informacoes {
+    background-color: red;
+    width: 50%;
+}
+
+.home .interface .informacoes h1 {
+    font-size: var(--font-sizeh1-home);
+}
+
+.home .interface .informacoes p {
+    font-size: var(--font-sizep-home);
+}
+
+.home .interface .foto {
+    width: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.home .interface .container {
-    display: flex;
-}
-
-.home .interface .container h1 {
-    font-size: var(--font-sizeh1-home);
-}
-
-.home .interface .container p {
-    font-size: var(--font-sizep-home);
-}
-
-.home .interface .container img {
-    width: 300px;
-    height: 350px;
+.home .interface .foto img {
+    width: 400px;
+    height: 450px;
     justify-content: space-between;
     align-items: center;
     border: 10px solid purple;
-    border-radius: 40px 20px 40px 20px;
+    border-radius: 40% 20px 40% 20px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.329);
 }
 

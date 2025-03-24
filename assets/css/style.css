@@ -17,7 +17,9 @@ body {
 
     /* header */
     --background-header: transparent;
+    --background-header-scrolled: rgb(20, 20, 20);
     --font-color-header: rgb(0, 0, 0);
+    --font-color-header-scrolled: rgb(255, 255, 255);
     --font-size-header: 25px;
     /* header */
 
@@ -53,6 +55,11 @@ header {
     background-color: var(--background-header);
     position: fixed;
     width: 100%;
+    transition: 0.5s;
+}
+
+header.scrolled {
+    background-color: var(--background-header-scrolled);
 }
 
 /*header::after {
@@ -146,3 +153,26 @@ header .interface .menu ul li {
 }
 
 /* HOME */
+
+/* CONTATOS */
+
+.contato {
+    background-color: aliceblue;
+}
+
+.contato .interface {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato .interface .container {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* CONTATOS */

@@ -29,6 +29,26 @@ body {
     --font-sizeh1-home: 60px;
     --font-sizep-home: 25px;
     /* home */
+
+    /* contato */
+    --background-contato: ;
+    --background-container-contato: ;
+    --font-color-a-contato: ;
+    --font-size-a-contato: ;
+    --font-color-p-contato: ;
+    --font-size-p-contato: ;
+    --font-color-label-contato: ;
+    --font-size-label-contato: ;
+    --background-button-contato: ;
+    --font-size-button-contato: ;
+
+    /* contato */
+
+    /* footer */
+    --background-footer: ;
+    --font-color-footer: ;
+    --font-size-footer: ;
+    /* footer */
 }
 
 .dark-theme {
@@ -153,10 +173,34 @@ header.scrolled {
 
 /* HOME */
 
-/* CONTATOS */
+/* CONHECIMENTOS */
 
+.conhecimentos {
+    & .interface {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & .conhecimentos {
+            & .tecnologias {
+                display: flex;
+                justify-content: space-around;
+
+                & .container {
+                    width: 10em;
+                    height: 10em;
+                }
+            }
+        }
+    }
+}
+
+/* CONHECIMENTOS */
+
+/* CONTATOS */
 .contato {
-    background-color: aliceblue;
+    background-color: var(--background-contato);
     height: 70vh;
 
     & .interface {
@@ -167,7 +211,7 @@ header.scrolled {
         & .container {
             width: 40%;
             height: 80%;
-            background-color: rgb(243, 243, 243);
+            background-color: var(--background-container-contato);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -192,37 +236,55 @@ header.scrolled {
                         list-style: none;
 
                         & a {
-                            color: black;
-                            font-size: 25px;
+                            color: var(--font-color-a-contato);
+                            font-size: var(--font-size-a-contato);
                         }
                     }
                 }
 
                 & p {
-                    color: black;
-                    font-size: 20px;
+                    color: var(--font-color-p-contato);
+                    font-size: var(--font-size-p-contato);
                 }
             }
 
             & .email {
                 width: 80%;
-                background-color: rebeccapurple;
+                height: 50%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
 
                 & .form-group {
-                    background-color: rgb(83, 110, 134);
+                    width: 100%;
                     display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1.5em;
 
                     & label {
-                        color: black;
-                        font-size: 18px;
+                        color: var(--font-color-label-contato);
+                        font-size: var(--font-size-label-contato);
                     }
 
                     & input {
-                        width: 80%;
+                        width: 100%;
+                        height: 3em;
                         border-radius: 1em;
                         border: none;
-
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
                     }
+                }
+
+                & button {
+                    background-color: var(--background-button-contato);
+                    width: 40%;
+                    font-family: "Roboto Condensed", sans-serif;
+                    font-weight: bold;
+                    font-size: var(--font-size-button-contato);
+                    border: none;
+                    border-radius: 0.5em;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                    padding: 1em;
                 }
             }
 
@@ -236,7 +298,7 @@ header.scrolled {
 /* FOOTER */
 
 footer {
-    background-color: black;
+    background-color: var(--background-footer);
 
     & .interface {
         height: 10vh;
@@ -245,9 +307,9 @@ footer {
         align-items: center;
 
         & p {
-            color: white;
+            color: var(--font-color-footer);
             text-align: center;
-            font-size: 18px;
+            font-size: var(--font-size-footer);
         }
     }
 }

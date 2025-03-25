@@ -56,6 +56,41 @@ header {
     position: fixed;
     width: 100%;
     transition: 0.5s;
+
+    & a {
+        color: var(--font-color-header);
+        text-decoration: none;
+        font-size: var(--font-size-header);
+    }
+
+    & .interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5em;
+
+            & img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        & .menu {
+            & ul {
+                display: flex;
+
+                & li {
+                    list-style: none;
+                    padding: 1em;
+                }
+            }
+        }
+    }
 }
 
 header.scrolled {
@@ -70,39 +105,6 @@ header.scrolled {
     background-image: linear-gradient(90deg, rgb(130, 87, 230) 0%, rgb(164, 14, 228) 92.32%);
 }*/
 
-header a {
-    color: var(--font-color-header);
-    text-decoration: none;
-    font-size: var(--font-size-header);
-}
-
-header .interface {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .interface .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-}
-
-header .interface .logo img {
-    width: 50px;
-    height: 50px;
-}
-
-header .interface .menu ul {
-    display: flex;
-}
-
-header .interface .menu ul li {
-    list-style: none;
-    padding: 1em;
-}
-
 /* HEADER */
 
 /* HOME */
@@ -113,43 +115,40 @@ header .interface .menu ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.home .interface {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
+    & .interface {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
 
-.home .interface .informacoes {
-    background-color: red;
-    width: 50%;
-}
+        & .informacoes {
+            width: 50%;
 
-.home .interface .informacoes h1 {
-    font-size: var(--font-sizeh1-home);
-}
+            & p {
+                font-size: var(--font-sizep-home);
+            }
 
-.home .interface .informacoes p {
-    font-size: var(--font-sizep-home);
-}
+            & h1 {
+                font-size: var(--font-sizeh1-home);
+            }
+        }
 
-.home .interface .foto {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        & .foto {
+            width: 50%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
 
-.home .interface .foto img {
-    width: 400px;
-    height: 450px;
-    justify-content: space-between;
-    align-items: center;
-    border: 10px solid purple;
-    border-radius: 40% 20px 40% 20px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.329);
+            & img {
+                width: 400px;
+                height: 450px;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.329);
+            }
+        }
+    }
 }
 
 /* HOME */
@@ -158,21 +157,101 @@ header .interface .menu ul li {
 
 .contato {
     background-color: aliceblue;
-}
+    height: 70vh;
 
-.contato .interface {
-    background-color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    & .interface {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.contato .interface .container {
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+        & .container {
+            width: 40%;
+            height: 80%;
+            background-color: rgb(243, 243, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 1em;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+            & .meio_contato {
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                & ul {
+                    width: 20em;
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 1em;
+
+                    & li {
+                        list-style: none;
+
+                        & a {
+                            color: black;
+                            font-size: 25px;
+                        }
+                    }
+                }
+
+                & p {
+                    color: black;
+                    font-size: 20px;
+                }
+            }
+
+            & .email {
+                width: 80%;
+                background-color: rebeccapurple;
+
+                & .form-group {
+                    background-color: rgb(83, 110, 134);
+                    display: flex;
+
+                    & label {
+                        color: black;
+                        font-size: 18px;
+                    }
+
+                    & input {
+                        width: 80%;
+                        border-radius: 1em;
+                        border: none;
+
+                    }
+                }
+            }
+
+        }
+    }
+
 }
 
 /* CONTATOS */
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+
+    & .interface {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & p {
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+/* FOOTER */

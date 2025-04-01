@@ -16,18 +16,18 @@ body {
 :root {
 
     /* header */
-    --background-header: transparent;
-    --background-header-scrolled: rgb(20, 20, 20);
-    --font-color-header: rgb(0, 0, 0);
-    --font-color-header-scrolled: rgb(255, 255, 255);
-    --font-size-header: 25px;
+    --background-header: ;
+    --background-header-scrolled: ;
+    --font-color-header: ;
+    --font-color-header-scrolled: ;
+    --font-size-header: ;
     /* header */
 
     /* home */
     --background-home: ;
-    --font-color-home: rgb(0, 0, 0);
-    --font-sizeh1-home: 60px;
-    --font-sizep-home: 25px;
+    --font-color-home: ;
+    --font-sizeh1-home: ;
+    --font-sizep-home: ;
     /* home */
 
     /* contato */
@@ -52,9 +52,9 @@ body {
 }
 
 .dark-theme {
-    --background-header: black;
-    --font-color-header: rgb(255, 255, 255);
-    --font-size-header: 25px;
+    --background-header: ;
+    --font-color-header: ;
+    --font-size-header: ;
 }
 
 /* Variáveis do CSS */
@@ -131,7 +131,7 @@ header.scrolled {
 
 .home {
     height: 100vh;
-    background-color: aliceblue;
+    background-color: var(--background-home);
     display: flex;
     justify-content: center;
     align-items: center;

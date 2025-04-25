@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+}
+
+html {
+    font-size: var(--font-size-html);
 }
 
 body {
@@ -14,6 +18,15 @@ body {
 
 /* Variáveis do CSS */
 :root {
+    /* Variaveis Globais */
+    /* html */
+
+    /* 62.5% = 10px */
+    /* 75% = 12px  */
+    /* 93.75 = 15px */
+
+    --font-size-html: 75%;
+    /* Variaveis Globais */
 
     /* header */
     --background-header: ;
@@ -26,8 +39,8 @@ body {
     /* home */
     --background-home: ;
     --font-color-home: ;
-    --font-sizeh1-home: ;
-    --font-sizep-home: ;
+    --font-sizeh1-home: 3rem;
+    --font-sizep-home: 1.5rem;
     /* home */
 
     /* contato */
@@ -62,7 +75,7 @@ body {
 /* INTERFACE */
 
 .interface {
-    max-width: 1280px;
+    max-width: 128rem;
     margin: 0 auto;
     height: 100%;
 }
@@ -76,11 +89,16 @@ header {
     position: fixed;
     width: 100%;
     transition: 0.5s;
+    height: 7rem;
 
     & a {
         color: var(--font-color-header);
         text-decoration: none;
         font-size: var(--font-size-header);
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
     }
 
     & .interface {
@@ -145,13 +163,25 @@ header.scrolled {
         & .informacoes {
             width: 50%;
 
-            & p {
-                font-size: var(--font-sizep-home);
-            }
-
             & h1 {
                 font-size: var(--font-sizeh1-home);
+                /*  <weight>: Use a value from 100 to 900 */
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
             }
+
+            & p {
+                font-size: var(--font-sizep-home);
+                /*  <weight>: Use a value from 100 to 900 */
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 300;
+                font-style: normal;
+            }
+
+
         }
 
         & .foto {

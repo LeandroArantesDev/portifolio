@@ -228,13 +228,17 @@ header {
             display: flex;
             justify-content: right;
             align-items: center;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(140, 0, 180, 1) 45%, rgba(170, 9, 214, 1) 100%);
+            border-radius: 120px 0px 120px 0px;
+            overflow: hidden;
 
             & img {
-                width: 400px;
-                height: 450px;
+                width: 500px;
+                height: 500px;
                 justify-content: space-between;
                 align-items: center;
-                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.329);
             }
         }
     }
@@ -242,30 +246,47 @@ header {
 
 /* HOME */
 
-/* CONHECIMENTOS */
+/* SOBRE MIM */
 
-.conhecimentos {
+.sobre {
+    height: 100vh;
+    background: var(--background-home);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     & .interface {
         display: flex;
-        justify-content: center;
+        width: 100%;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
 
-        & .conhecimentos {
-            & .tecnologias {
-                display: flex;
-                justify-content: space-around;
+        & .foto {
+            width: 50%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(140, 0, 180, 1) 45%, rgba(170, 9, 214, 1) 100%);
+            border-radius: 120px 0px 120px 0px;
+            overflow: hidden;
 
-                & .container {
-                    width: 10em;
-                    height: 10em;
-                }
+            & img {
+                width: 500px;
+                height: 500px;
+                justify-content: space-between;
+                align-items: center;
             }
+        }
+
+        & .informacoes {
+            width: 50px;
         }
     }
 }
 
-/* CONHECIMENTOS */
+/* SOBRE MIM */
 
 /* CONTATOS */
 .contato {

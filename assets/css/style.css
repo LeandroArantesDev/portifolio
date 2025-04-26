@@ -30,8 +30,8 @@ body {
     /* Variaveis Globais */
 
     /* header */
-    --background-header: white;
-    --background-header-scrolled: white;
+    --background-header: rgb(255, 255, 255);
+    --background-header-scrolled: rgba(246, 231, 247, 0.8);
     --font-color-header: ;
     --font-color-header-scrolled: ;
     --font-size-header: 1.5rem;
@@ -39,7 +39,7 @@ body {
     /* header */
 
     /* home */
-    --background-home: ;
+    --background-home: radial-gradient(circle, rgba(48, 38, 48, 1) 25%, rgba(25, 20, 25, 1) 100%);
     --font-color-home: ;
     --font-sizeh1-home: 3rem;
     --font-sizep-home: 1.5rem;
@@ -94,7 +94,7 @@ header {
     transition: 0.3s linear;
 
     & span {
-        color: rgb(20, 120, 5);
+        color: rgb(70, 10, 90);
     }
 
     & a {
@@ -105,7 +105,7 @@ header {
     }
 
     & i {
-        color: rgb(20, 120, 5);
+        color: rgb(70, 10, 90);
     }
 
     & .interface {
@@ -158,13 +158,17 @@ header {
         display: block;
         width: 100%;
         height: 3px;
-        background: linear-gradient(90deg, rgb(20, 120, 5) 0%, rgba(72, 255, 43, 1) 50%, rgb(20, 120, 5) 100%);
+        background: linear-gradient(90deg, rgb(70, 10, 90) 0%, rgb(170, 25, 220) 50%, rgb(70, 10, 90) 100%);
     }
 }
 
 header.scrolled {
     background-color: var(--background-header-scrolled);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    /* mesma cor, mas transparente */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Suporte Safari */
 }
 
 /* HEADER */
@@ -173,7 +177,7 @@ header.scrolled {
 
 .home {
     height: 100vh;
-    background-color: var(--background-home);
+    background: var(--background-home);
     display: flex;
     justify-content: center;
     align-items: center;

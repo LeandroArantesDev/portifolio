@@ -30,19 +30,21 @@ body {
     /* Variaveis Globais */
 
     /* header */
-    --background-header: rgb(255, 255, 255);
-    --background-header-scrolled: rgba(246, 231, 247, 0.8);
-    --font-color-header: ;
-    --font-color-header-scrolled: ;
+    --background-header: rgb(20, 20, 20);
+    --font-color-header: rgb(250, 250, 250);
     --font-size-header: 1.5rem;
     --font-sizei-header: 1.5rem;
     /* header */
 
     /* home */
-    --background-home: radial-gradient(circle, rgba(48, 38, 48, 1) 25%, rgba(25, 20, 25, 1) 100%);
-    --font-color-home: ;
-    --font-sizeh1-home: 3rem;
-    --font-sizep-home: 1.5rem;
+    --background-home: rgb(20, 20, 20);
+    --font-color-home: rgb(250, 250, 250);
+    --font-sizeh1-home: 4rem;
+    --font-sizep-home: 2rem;
+    --background-button-home: rgb(140, 0, 180);
+    --background-button2-home: rgb(170, 9, 214);
+    --font-color-button-home: rgb(250, 250, 250);
+    --font-sizebutton-home: 1.5rem;
     /* home */
 
     /* contato */
@@ -94,7 +96,7 @@ header {
     transition: 0.3s linear;
 
     & span {
-        color: rgb(70, 10, 90);
+        color: rgb(140, 0, 180);
     }
 
     & a {
@@ -105,7 +107,7 @@ header {
     }
 
     & i {
-        color: rgb(70, 10, 90);
+        color: rgb(140, 0, 180);
     }
 
     & .interface {
@@ -148,27 +150,13 @@ header {
         }
     }
 
-    &:hover {
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-        transition: 1s;
-    }
-
     &::after {
         content: "";
         display: block;
         width: 100%;
         height: 3px;
-        background: linear-gradient(90deg, rgb(70, 10, 90) 0%, rgb(170, 25, 220) 50%, rgb(70, 10, 90) 100%);
+        background: linear-gradient(90deg, rgb(161, 97, 184) 0%, rgb(198, 28, 255) 50%, rgb(161, 97, 184) 100%);
     }
-}
-
-header.scrolled {
-    background-color: var(--background-header-scrolled);
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-    /* mesma cor, mas transparente */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* Suporte Safari */
 }
 
 /* HEADER */
@@ -181,6 +169,10 @@ header.scrolled {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & span {
+        color: rgb(140, 0, 180);
+    }
 
     & .interface {
         display: flex;
@@ -198,6 +190,7 @@ header.scrolled {
                 font-optical-sizing: auto;
                 font-weight: 500;
                 font-style: normal;
+                color: var(--font-color-home);
             }
 
             & p {
@@ -207,6 +200,24 @@ header.scrolled {
                 font-optical-sizing: auto;
                 font-weight: 300;
                 font-style: normal;
+                color: var(--font-color-home);
+            }
+
+            & .button {
+                display: flex;
+                align-items: center;
+                justify-content: baseline;
+                gap: 3rem;
+                padding: 1rem 0rem;
+
+                & a {
+                    padding: 1rem;
+                    background: linear-gradient(90deg, var(--background-button-home) 0%, var(--background-button2-home) 100%);
+                    text-decoration: none;
+                    color: var(--font-color-button-home);
+                    font-size: var(--font-sizebutton-home);
+                    border-radius: 20px;
+                }
             }
 
 
@@ -375,3 +386,32 @@ footer {
 
 
 /* FOOTER */
+
+
+/* SCROLLBAR */
+
+/* A largura da barra */
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+/* A parte do fundo da barra */
+::-webkit-scrollbar-track {
+    background: rgb(20, 20, 20);
+
+}
+
+/* A parte que se move (o "thumb") */
+::-webkit-scrollbar-thumb {
+    background: rgb(140, 0, 180);
+    min-height: 5px;
+
+}
+
+/* Quando passa o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(169, 108, 185);
+    /* um roxo um pouco mais claro */
+}
+
+/* SCROLLBAR */

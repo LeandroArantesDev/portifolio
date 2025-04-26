@@ -12,8 +12,9 @@ html {
 }
 
 body {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /* Variáveis do CSS */
@@ -29,11 +30,12 @@ body {
     /* Variaveis Globais */
 
     /* header */
-    --background-header: ;
-    --background-header-scrolled: ;
+    --background-header: transparent;
+    --background-header-scrolled: white;
     --font-color-header: ;
     --font-color-header-scrolled: ;
-    --font-size-header: ;
+    --font-size-header: 1.5rem;
+    --font-sizei-header: 1.5rem;
     /* header */
 
     /* home */
@@ -88,17 +90,17 @@ header {
     background-color: var(--background-header);
     position: fixed;
     width: 100%;
-    transition: 0.5s;
     height: 7rem;
+
+    & span {
+        color: rgba(63, 148, 50, 1);
+    }
 
     & a {
         color: var(--font-color-header);
+        font-weight: 500;
         text-decoration: none;
         font-size: var(--font-size-header);
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
     }
 
     & .interface {
@@ -119,29 +121,62 @@ header {
         }
 
         & .menu {
-            & ul {
-                display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
 
-                & li {
-                    list-style: none;
-                    padding: 1em;
+            & a {
+                color: var(--font-color-header);
+                text-decoration: none;
+                font-size: var(--font-size-header);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+
+
+                & i {
+                    font-size: var(--font-sizei-header);
                 }
             }
+        }
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+        transition: 1s;
+
+        & i {
+            color: rgba(63, 148, 50, 1);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(63, 148, 50, 1) 0%, rgba(72, 255, 43, 1) 50%, rgba(63, 148, 50, 1) 100%);
         }
     }
 }
 
 header.scrolled {
     background-color: var(--background-header-scrolled);
-}
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
 
-/*header::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.1em;
-    background-image: linear-gradient(90deg, rgb(130, 87, 230) 0%, rgb(164, 14, 228) 92.32%);
-}*/
+    & i {
+        color: rgba(63, 148, 50, 1);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(63, 148, 50, 1) 0%, rgba(72, 255, 43, 1) 50%, rgba(63, 148, 50, 1) 100%);
+    }
+}
 
 /* HEADER */
 

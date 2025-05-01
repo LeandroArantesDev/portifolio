@@ -38,4 +38,26 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.remove('dark-tema');
 
     }
-});    
+});
+
+const btnmenu = document.getElementById("btn-menu");
+const btnmenufechar = document.getElementById("btn-menufechar");
+const overlay = document.getElementById("overlay");
+
+btnmenu.addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    menu.classList.add("active");
+    overlay.classList.add("active");
+})
+
+btnmenufechar.addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+})
+
+overlay.addEventListener("click", function () {
+    const menu = document.getElementById("menu");
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+})

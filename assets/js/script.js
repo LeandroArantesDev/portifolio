@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const btnmenu = document.getElementById("btn-menu");
 const btnmenufechar = document.getElementById("btn-menufechar");
 const overlay = document.getElementById("overlay");
+const links = document.querySelectorAll(".link-menu");
 
 btnmenu.addEventListener("click", function () {
     const menu = document.getElementById("menu");
@@ -61,3 +62,12 @@ overlay.addEventListener("click", function () {
     menu.classList.remove("active");
     overlay.classList.remove("active");
 })
+
+links.forEach(function (link) {
+    link.addEventListener("click", function () {
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("overlay"); // adicione isso se overlay não estiver definido
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+    });
+});

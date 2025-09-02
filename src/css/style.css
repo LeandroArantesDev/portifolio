@@ -48,7 +48,7 @@ html {
 }
 
 /* Essa div serve para quando alguém acessar o site pelo celular ela vai mostrar que está em desenvolvimento. */
-.em-desenvolvimento {
+#em-desenvolvimento {
     display: none;
 }
 

@@ -36,6 +36,12 @@
 </head>
 
 <body>
+    <!-- Essa div serve para quando alguém acessar o site pelo celular ela vai mostrar que está em desenvolvimento. -->
+    <div id="em-desenvolvimento">
+        <p>Site em desenvolvimento</p>
+    </div>
+
+
     <header role="banner">
         <div class="interface">
             <div class="nome">
@@ -67,10 +73,11 @@
                         tecnologias modernas para criar soluções web completas e inovadoras.
                     </p>
                     <nav class="botoes" aria-label="Ações principais">
-                        <a href="#contato" class="botao-contato" aria-label="Entrar em contato comigo">
+                        <a href="#contato" class="botao-contato" id="botao-contato"
+                            aria-label="Entrar em contato comigo">
                             <i class="bi bi-envelope" aria-hidden="true"></i>Entre em contato
                         </a>
-                        <a href="#" class="botao-download" aria-label="Baixar meu currículo em PDF">
+                        <a href="#" class="botao-download" id="botao-download" aria-label="Baixar meu currículo em PDF">
                             <i class="bi bi-download" aria-hidden="true"></i>Download CV
                         </a>
                     </nav>
@@ -323,8 +330,10 @@
                             </a>
                         </nav>
                     </div>
-                    <form action="https://api.staticforms.xyz/submit" role="form" aria-labelledby="form-title">
-                        <input type="hidden" name="apiKey" value="sf_82n747705macjjcm6n7mefgk">
+                    <form action="https://api.staticforms.xyz/submit" role="form" aria-labelledby="form-title"
+                        method="POST">
+                        <input type="hidden" name="accessKey" value="sf_82n747705macjjcm6n7mefgk">
+                        <input type="hidden" name="redirectTo" value="https://www.leandroarantes.com.br/obrigado.html">
                         <h3 id="form-title">Envie uma mensagem</h3>
                         <div class="input-group">
                             <label for="nome">Nome *</label>

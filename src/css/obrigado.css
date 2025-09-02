@@ -1,0 +1,157 @@
+/* CSS do portfólio */
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Cores principais */
+    --fundo-branco: #FAFAFA;
+    --fundo-azul: rgb(30, 120, 200);
+    --fundo-cinza: rgb(241, 241, 241);
+    --fundo-branco-azulado: #f6f7f8;
+    --fundo-branco-escuro: #FDFDFD;
+    --fundo-branco-opaco: #fafafa88;
+    --fundo-azul-opaco: rgba(30, 120, 200, 0.2);
+
+    /* Cores letras */
+    --letra-branca: rgb(255, 255, 255);
+    --letra-preta: rgb(20, 20, 20);
+    --letra-azul: rgb(30, 120, 200);
+    --letra-cinza: rgb(120, 120, 120);
+
+    /* Box-shadows */
+    --shadow-preta: 0px 0px 20px rgba(20, 20, 20, 0.15);
+    --shadow-azul: 0px 0px 35px rgba(30, 120, 200, 0.5);
+
+    /* Bordas */
+    --borda-image-hero: rgba(30, 120, 200, 0.5);
+    --borda-botao: rgb(30, 120, 200);
+    --borda-input: rgb(190, 190, 190);
+    --borda-input-focus: rgb(30, 120, 200);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+    scroll-margin-top: 7rem;
+    /* outline: solid 1px red; */
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--fundo-branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .container {
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        & .bi-hand-thumbs-up {
+            font-size: 5rem;
+            color: var(--letra-branca);
+            background-color: var(--fundo-azul);
+            width: 10rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        & .botoes {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+
+            & #botao-voltar {
+                text-decoration: none;
+                padding: 1rem 3rem;
+                background-color: var(--fundo-azul);
+                color: var(--letra-branca);
+                font-size: 1.5rem;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                border-radius: 1rem;
+                border: .2rem solid transparent;
+
+                & i {
+                    font-size: 1.5rem;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: var(--shadow-preta);
+                }
+            }
+
+            & #botao-linkedin {
+                text-decoration: none;
+                padding: 1rem 3rem;
+                background-color: var(--fundo-branco);
+                color: var(--letra-azul);
+                font-size: 1.5rem;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                border-radius: 1rem;
+                border: .2rem solid var(--borda-botao);
+
+                & i {
+                    font-size: 1.5rem;
+                }
+
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: var(--shadow-preta);
+                    background-color: var(--fundo-azul);
+                    color: var(--letra-branca);
+                }
+            }
+        }
+
+        & h1,
+        h2 {
+            font-size: 2rem;
+            color: var(--letra-preta);
+        }
+
+        & p {
+            font-size: 1.5rem;
+            color: var(--letra-cinza);
+        }
+
+        & ol {
+            & li {
+                font-size: 1.5rem;
+                color: var(--letra-preta);
+            }
+        }
+    }
+}

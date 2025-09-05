@@ -140,18 +140,36 @@ body {
         h2 {
             font-size: 2rem;
             color: var(--letra-preta);
+            text-align: center;
         }
 
         & p {
             font-size: 1.5rem;
             color: var(--letra-cinza);
+            text-align: center;
         }
 
         & ol {
+            list-style: none;
+
             & li {
                 font-size: 1.5rem;
                 color: var(--letra-preta);
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                gap: 1rem;
+
+                & i {
+                    font-size: 1.7rem;
+                }
             }
         }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 450px) {
+    .container {
+        width: 100% !important;
     }
 }

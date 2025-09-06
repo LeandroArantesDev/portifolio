@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="src/images/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="src/css/obrigado.css">
     <title>Recebi sua Mensagem!</title>
@@ -33,23 +33,24 @@
             </a>
         </nav>
 
-        <p>Você será redirecionado automaticamente em <span>30</span> segundos...</p>
+        <p>Você será redirecionado automaticamente em <span>20</span> segundos...</p>
 
     </div>
 
 </body>
 
-<!-- <script>
-    let seconds = 30;
-    const span = document.querySelector('span');
+<script>
+    let seconds = 20;
+    const span = document.querySelector('.container p span');
+    console.log(span);
     const interval = setInterval(() => {
         seconds--;
         span.textContent = seconds;
         if (seconds <= 0) {
             clearInterval(interval);
-            window.location.href = " https://www.leandroarantes.com.br";
+            window.location.href = "https://www.leandroarantes.com.br";
         }
     }, 1000); 
-</script> -->
+</script>
 
 </html>

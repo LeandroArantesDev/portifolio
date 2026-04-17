@@ -407,7 +407,7 @@ header {
           }
 
           &:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05);
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.16);
           }
         }
@@ -606,7 +606,7 @@ header {
         }
 
         &:hover {
-          transform: translateY(-10px);
+          transform: scale(1.05);
           box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.16);
 
           & .img {
@@ -730,7 +730,7 @@ header {
             }
 
             &:hover {
-              transform: translateY(-10px);
+              transform: scale(1.05);
               box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09);
 
               & i {
@@ -763,7 +763,7 @@ header {
               box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.04);
 
               &:hover {
-                transform: translateY(-10px);
+                transform: scale(1.05);
                 box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.09);
                 background-color: var(--fundo-azul);
                 color: var(--letra-branca);
@@ -941,7 +941,7 @@ footer {
         box-shadow: var(--shadow-preta);
 
         & i {
-          transform: translateY(-3px);
+          transform: scale(1.05);
         }
       }
     }
